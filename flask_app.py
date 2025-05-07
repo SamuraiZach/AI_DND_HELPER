@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
-token = os.getenv["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com";
-modelName = "gpt-4o";
+token = os.environ["GITHUB_TOKEN"]
+endpoint = "https://models.inference.ai.azure.com"
+modelName = "gpt-4o"
 client = OpenAI(
     base_url=endpoint,
     api_key=token,
